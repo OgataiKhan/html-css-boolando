@@ -10,28 +10,6 @@ RESET
     box-sizing: border-box;
  }
 
- /* 
-********
-DEBUG
-********
-*/
-
-/* #region */
-
-.debug main .container {
-   background-color: green;
-}
-
-.debug main .box {
-   background-color: orange;
-}
-
-.debug footer .footer-container {
-   background-color: purple;
-}
-
-/* #endregion */
-
 
 /* 
 ********
@@ -46,16 +24,17 @@ body {
 }
 
 main .box .tags .tag {
-   color: white;
    font-size: 14px;
-   font-weight: 700;
 }
 
 main .box .brand {
    font-size: 14px;
 }
 
-main .box .product-name {
+main .box .tags .tag, 
+main .box .product-name,
+main .box .price .current-price,
+header nav .categories {
    font-weight: 700;
 }
 
@@ -65,14 +44,15 @@ main .box .price {
 
 main .box .price .current-price {
    color: red;
-   font-weight: 700;
 }
 
 main .box .price .original-price {
    text-decoration: line-through;
 }
 
-footer {
+footer, 
+header, 
+main .box .tags .tag {
    color: white;
 } 
 
@@ -94,6 +74,7 @@ footer .social-links {
 
 
 
+
 /* #endregion */
 
 /* 
@@ -110,8 +91,17 @@ COMMON
    margin: 0 auto;
 }
 
+.layout-container {
+   max-width: 1375px;
+   margin: 0 auto;
+}
+
 .flexbox {
    display: flex;
+}
+
+ul {
+   list-style: none;
 }
 
 /* #endregion */
@@ -121,6 +111,44 @@ COMMON
 HEADER
 ********
 */
+
+header {
+   background-color: #ff6900;
+}
+
+header .layout-container {
+   justify-content: space-between;
+   padding: 20px 0;
+}
+
+header .flexbox {
+   align-items: center;
+}
+
+header .categories, header .icons {
+   width: 20%;
+}
+
+header .categories {
+   gap: 10px
+}
+
+header .icons {
+   gap: 9px;
+}
+
+header .logo {
+   max-width: 135px;
+}
+
+header .logo img {
+   width: 100%;
+}
+
+header {
+   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 
 /* 
 ********
@@ -208,19 +236,15 @@ FOOTER
 ********
 */
 
+/* #region */
+
 footer {
    background-color: #1a1a1a;
 }
 
-footer .footer-container {
-   max-width: 1375px;
-   margin: 0 auto;
+footer .layout-container {
    padding: 30px 0 30px;
    justify-content: space-between;
-}
-
-footer ul {
-   list-style: none;
 }
 
 footer .legal-docs {
@@ -238,3 +262,5 @@ footer .social-links {
 footer h4 {
    margin-bottom: 8px;
 }
+
+/* #endregion */
