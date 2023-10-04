@@ -43,8 +43,32 @@ body {
 
 main .box .tags .tag {
    color: white;
-   font-size: 12px;
+   font-size: 14px;
+   font-weight: 700;
 }
+
+main .box .brand {
+   font-size: 14px;
+}
+
+main .box .product-name {
+   font-weight: 700;
+}
+
+main .box .price {
+   font-size: 13px;
+}
+
+main .box .price .current-price {
+   color: red;
+   font-weight: 700;
+}
+
+main .box .price .original-price {
+   text-decoration: line-through;
+}
+
+
 
 /* #endregion */
 
@@ -134,6 +158,25 @@ main .box .heart:hover {
    color: red;
 }
 
+main .box .tags {
+   position: absolute;
+   bottom: 42px;
+}
+
+main .box .tags .tag {
+   display: inline-block;
+   padding: 6px 11px;
+}
+
+main .box .tags .sconto {
+   background-color: red;
+}
+
+main .box .tags .sostenibile {
+   background-color: green;
+}
+
+/* Dettagli */
 
 
 
