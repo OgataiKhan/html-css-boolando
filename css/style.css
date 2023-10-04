@@ -10,8 +10,24 @@ RESET
     box-sizing: border-box;
  }
 
+ /* 
+********
+DEBUG
+********
+*/
+
 /* #region */
+
+.debug main .container {
+   background-color: green;
+}
+
+.debug main .box {
+   background-color: orange;
+}
+
 /* #endregion */
+
 
 /* 
 ********
@@ -19,11 +35,38 @@ TYPOGRAPHY
 ********
 */
 
+/* #region */
+
+body {
+   font-family: 'Roboto', sans-serif;
+}
+
+main .box .tags .tag {
+   color: white;
+   font-size: 12px;
+}
+
+/* #endregion */
+
 /* 
 ********
 COMMON
 ********
 */
+
+/* #region */
+
+
+.container {
+   max-width: 1500px;
+   margin: 0 auto;
+}
+
+.flexbox {
+   display: flex;
+}
+
+/* #endregion */
 
 /* 
 ********
@@ -36,6 +79,68 @@ HEADER
 MAIN
 ********
 */
+
+/* #region */
+
+main .container.main {
+   padding: 60px 30px;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 20px;
+   /* position: relative; */
+   /* flex-shrink: 0; */
+}
+
+main .box {
+   width: 445px;
+}
+
+/* Immagine */
+
+main .box .image-box {
+   position: relative;
+}
+
+main .box img {
+   width: 100%;
+}
+
+main .box .alt-img {
+   position: absolute;
+   /* top: 0; */
+   left: 0;
+   display: none;
+}
+
+main .box .main-img:hover + .alt-img {
+   display: inline-block;
+}
+
+main .box .heart {
+   font-family: initial;
+   background-color: white;
+   width: 50px;
+   font-size: 30px;
+   justify-content: center;
+   align-items: center;
+   padding-top: 9px;
+   padding-bottom: 5px;
+   position: absolute;
+   right: 0;
+   top: 10px;
+}
+
+main .box .heart:hover {
+   color: red;
+}
+
+
+
+
+
+
+
+/* #endregion */
 
 /* 
 ********
