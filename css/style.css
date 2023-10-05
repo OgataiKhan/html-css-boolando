@@ -84,11 +84,6 @@ COMMON
 
 
 .container {
-   max-width: 1500px;
-   margin: 0 auto;
-}
-
-.layout-container {
    max-width: 1375px;
    margin: 0 auto;
 }
@@ -115,17 +110,18 @@ header {
    background-color: #ff6900;
 }
 
-header .layout-container {
+header .container {
    justify-content: space-between;
    padding: 20px 0;
 }
 
-header .flexbox {
+header .flexbox.container {
+   justify-content: space-between;
    align-items: center;
 }
 
-header .categories, header .icons {
-   width: 20%;
+header .categories-box, header .icons-box {
+   width: 25%;
 }
 
 header .categories {
@@ -134,6 +130,7 @@ header .categories {
 
 header .icons {
    gap: 9px;
+   justify-content: end;
 }
 
 header .logo {
@@ -167,14 +164,13 @@ MAIN
 /* #region */
 
 main .container.main {
-   padding: 134px 30px;
+   padding: 134px 0;
    flex-wrap: wrap;
-   justify-content: center;
    gap: 20px;
 }
 
 main .box {
-   width: 445px;
+   width: calc((1375px - 40px) / 3);
 }
 
 /* Immagine */
@@ -189,6 +185,7 @@ main .box img {
 
 main .box .alt-img {
    position: absolute;
+   top: 0;
    left: 0;
    opacity: 0;
    visibility: hidden;
@@ -251,7 +248,7 @@ footer {
    border-bottom: 1px solid white;
 }
 
-footer .layout-container {
+footer .container {
    padding: 30px 0 30px;
    justify-content: space-between;
 }
